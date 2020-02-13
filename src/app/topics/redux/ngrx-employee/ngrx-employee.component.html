@@ -1,0 +1,25 @@
+<p>ngrx-employee works!</p>
+
+<div class="" fxLayout="column" fxLayoutGap="10px">
+    <div>
+        <input type="email" [(ngModel)]="employee$.email" fxFlex="200px">
+    </div>
+    <div>
+        <input type="text" [(ngModel)]="employee$.first_name" fxFlex="200px">
+    </div>
+    <div>
+        <input type="text" [(ngModel)]="employee$.last_name" fxFlex="200px">
+    </div>
+    <div>
+        <input type="text" [(ngModel)]="employee$.avatar" fxFlex="200px">
+    </div>
+    <div>
+        <button type="button" (click)="addEmployee()">Add Employee</button>
+    </div>
+</div>
+
+<!-- {{ employee$ | json }} -->
+
+
+
+ 
