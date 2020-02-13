@@ -5,7 +5,11 @@ const routes: Routes = [
   {
     path: 'pipes',
     loadChildren: './topics/pipes/pipes.module#PipesModule'
-  }
+  },
+  {
+    path: 'redux',
+    loadChildren: './topics/redux/redux.module#ReduxModule'
+  } 
 ];
 
 @NgModule({
