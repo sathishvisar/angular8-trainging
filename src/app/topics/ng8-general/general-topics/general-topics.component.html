@@ -1,1 +1,124 @@
-<p>general-topics works!</p>
+<div fxLayout="column" fxLayoutGap="20px">
+
+    <!-- Features -->
+    <mat-card fxFlex="90%">
+        <mat-card-header>
+            <mat-card-title>Features:</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <ul>
+                <li>Support TypeScript 3.4</li>
+                <li>Supports Web Workers</li>
+                <li>Preview of Ivy available</li>
+                <li>Lazy loading</li>
+                <li>Improvement of ngUpgrade</li>
+            </ul>
+        </mat-card-content>
+    </mat-card>
+
+    <!--  -->
+    <mat-card fxFlex="90%">
+        <mat-card-header>
+            <mat-card-title>Angular 8 directives:</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <ul>
+                <li>Component Directives</li>
+                <li>Structural Directives</li>
+                <li>Attribute Directives</li>
+            </ul>
+
+            <b>Component Directives:</b> Component directives are used in main <b>class</b>. They contain the detail of how the component should be processed, instantiated and used at runtime.
+            <br>
+            <br>
+            <hr>
+            <b>Structural Directives:</b> Structural directives start with a <b>*</b>sign. These directives are used to manipulate and change the structure of the DOM elements. For example, <b>*ngIf</b> directive, <b>*ngSwitch</b> directive, and <b>*ngFor</b> directive.
+            <br>
+            <b>*ngIf Directive:</b> The ngIf allows us to Add/Remove DOM Element.<br>
+            <b>*ngSwitch Directive:</b> The *ngSwitch allows us to Add/Remove DOM Element. It is similar to switch statement of C#.<br>
+            <b>*ngFor Directive:</b> The *ngFor directive is used to repeat a portion of HTML template once per each item from an iterable list (Collection).
+            <br>
+            <br>
+            <hr>
+            <b>Attribute Directives:</b> Attribute directives are used to change the look and behavior of the DOM elements. For example: ngClass directive, and ngStyle directive etc.
+            <b>ngClass Directive:</b> The ngClass directive is used to add or remove CSS classes to an HTML element.<br>
+            <b>ngStyle Directive:</b> The ngStyle directive facilitates you to modify the style of an HTML element using the expression. You can also use ngStyle directive to dynamically change the style of your HTML element.
+        </mat-card-content>
+    </mat-card>
+
+
+    <mat-card fxFlex="90%">
+        <mat-card-header>
+            <mat-card-title>*ngIf:</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <button mat-raised-button (click)="condition = !condition">Condition</button>
+
+            <p *ngIf="condition">  
+                condition is true and ngIf is true.  
+            </p>  
+            <p *ngIf="!condition">  
+                condition is false and ngIf is false.  
+            </p>  
+
+            <div *ngIf="condition; else elseBlock">  
+                Content to render when condition is true.  
+            </div>  
+            <ng-template #elseBlock>  
+                Content to render when condition is false. Else  
+            </ng-template>  
+        </mat-card-content>
+    </mat-card>
+
+
+    <mat-card fxFlex="90%">
+        <mat-card-header>
+            <mat-card-title>*ngFor:</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <ul>
+                <ng-container *ngFor="let user of ngForUsers">
+                    <li id="{{user.id}}">{{ user.name }}</li>
+                </ng-container>
+            </ul>
+        </mat-card-content>
+    </mat-card>
+
+
+
+    <mat-card fxFlex="90%">
+        <mat-card-header>
+            <mat-card-title>ngSwitch</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+
+            <select [(ngModel)]="selectedValue">  
+                <option *ngFor="let item of items;" [value]="item.name">{{item.name}}</option>  
+            </select>  
+            <div class='row' [ngSwitch]="selectedValue">  
+                <div *ngSwitchCase="'One'">One is Pressed</div>  
+                <div *ngSwitchCase="'Two'">Two is Selected</div>  
+                <div *ngSwitchDefault>Default Option</div>  
+            </div>  
+            
+        </mat-card-content>
+    </mat-card>
+
+
+    <mat-card fxFlex="90%">
+        <mat-card-header>
+            <mat-card-title>Title:</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card fxFlex="90%">
+        <mat-card-header>
+            <mat-card-title>Title:</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+        </mat-card-content>
+    </mat-card>
+
+</div>

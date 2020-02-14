@@ -8,9 +8,11 @@
 
     <ul>
         <li *ngFor="let user of users | filter : searchTearm "  fxLayout="column" fxLayoutGap="10px" >
-            <div class="single-topic" fxLayout="column">     
+            <div class="single-topic" fxLayout="row">     
                 <span>name - {{user.name}}</span>
-                <h4>{{user.email}}</h4>
+                <h4 style="margin: 0px;
+                padding: 0px;
+                margin-left: 10px;">{{user.email}}</h4>
             </div>
         </li>
     </ul>

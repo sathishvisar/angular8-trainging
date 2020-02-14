@@ -7,17 +7,15 @@ import { ApiService } from './../api.service';
   templateUrl: './pipes.component.html',
   styleUrls: ['./pipes.component.scss']
 })
-export class PipesComponent implements OnInit {
+export class PipesComponent {
 
   public users:any = [];
 
   searchTearm:string = "";
 
-  constructor(private service: ApiService) { }
-
-  ngOnInit() {
+  constructor(private service: ApiService) {
     this.getUsers();
-  }
+   }
 
   getUsers(){
     this.service.getUsers().subscribe( res => {
