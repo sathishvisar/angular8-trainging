@@ -11,7 +11,11 @@ const routes: Routes = [
     path: 'redux',
     //loadChildren: './topics/redux/redux.module#ReduxModule'
     loadChildren: () => import('./topics/redux/redux.module').then(m => m.ReduxModule)
-  } 
+  },
+  {
+    path: 'ng8',
+    loadChildren: () => import('./topics/ng8-general/ng8-general.module').then(m => m.Ng8GeneralModule)
+  }
 ];
 
 @NgModule({
