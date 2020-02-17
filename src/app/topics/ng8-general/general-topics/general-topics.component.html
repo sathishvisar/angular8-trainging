@@ -107,9 +107,11 @@
 
     <mat-card fxFlex="90%">
         <mat-card-header>
-            <mat-card-title>Title:</mat-card-title>
+            <mat-card-title>Custom Directives:</mat-card-title>
         </mat-card-header>
         <mat-card-content>
+            <h2 myHighlight>Highlited Text</h2>
+            <input InputCid type="text" [params]='{type: "mobile"}'  >
         </mat-card-content>
     </mat-card>
 
