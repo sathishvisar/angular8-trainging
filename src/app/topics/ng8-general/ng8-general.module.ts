@@ -14,10 +14,12 @@ import {MatButtonModule} from '@angular/material/button';
 
 import { GeneralTopicsComponent } from './general-topics/general-topics.component';
 import { Ng8GeneralRoutingModule } from './ng8-general-routing.module';
+import { Ng8GeneralComponent } from './ng8-general.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 
 @NgModule({
-  declarations: [GeneralTopicsComponent, ],
+  declarations: [GeneralTopicsComponent, Ng8GeneralComponent, RxjsComponent, ],
   imports: [
     CommonModule,
     SharedModule,
